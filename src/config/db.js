@@ -1,5 +1,6 @@
 import pg from 'pg'
 import 'dotenv/config'
+export default Pool
 const { Pool } = pg
  
 const pool = new Pool()
@@ -11,6 +12,6 @@ pool.on('error', (err, client) => {
 })
 
 const celular  = await pool.query
-('SELECT * FROM celualres')
+('SELECT * FROM celulares')
 
 console.log(celular.row);
